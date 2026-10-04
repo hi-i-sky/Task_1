@@ -12,6 +12,10 @@ from burger import Burger
 from ingredient_types import INGREDIENT_TYPE_FILLING, INGREDIENT_TYPE_SAUCE
 
 @pytest.fixture
+def empty_burger():
+    return Burger()
+
+@pytest.fixture
 def mock_bun():
     mock = Mock()
     mock.get_name.return_value = "black bun"
