@@ -11,6 +11,7 @@ from unittest.mock import Mock
 from burger import Burger
 from bun import Bun
 from ingredient import Ingredient
+from database import Database
 from ingredient_types import INGREDIENT_TYPE_FILLING, INGREDIENT_TYPE_SAUCE
 
 @pytest.fixture
@@ -26,6 +27,10 @@ def bun():
 def ingredient():
     ingredient = Ingredient(INGREDIENT_TYPE_FILLING, "sausage", 300)
     return ingredient
+
+@pytest.fixture
+def db():
+    return Database()
 
 @pytest.fixture
 def mock_bun():
