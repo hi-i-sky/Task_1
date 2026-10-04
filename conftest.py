@@ -9,11 +9,17 @@ if root_dir not in sys.path:
 
 from unittest.mock import Mock
 from burger import Burger
+from bun import Bun
 from ingredient_types import INGREDIENT_TYPE_FILLING, INGREDIENT_TYPE_SAUCE
 
 @pytest.fixture
 def empty_burger():
     return Burger()
+
+@pytest.fixture
+def bun():
+    bun = Bun("red bun", 300)
+    return bun
 
 @pytest.fixture
 def mock_bun():
