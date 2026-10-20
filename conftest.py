@@ -5,6 +5,8 @@ from bun import Bun
 from ingredient import Ingredient
 from database import Database
 from ingredient_types import INGREDIENT_TYPE_FILLING, INGREDIENT_TYPE_SAUCE
+from constants.data_set import BUN_NAME, BUN_PRICE, INGREDIENT_NAME, INGREDIENT_PRICE
+
 
 @pytest.fixture
 def empty_burger():
@@ -12,12 +14,12 @@ def empty_burger():
 
 @pytest.fixture
 def bun():
-    bun = Bun("red bun", 300)
+    bun = Bun(BUN_NAME, BUN_PRICE)
     return bun
 
 @pytest.fixture
 def ingredient():
-    ingredient = Ingredient(INGREDIENT_TYPE_FILLING, "sausage", 300)
+    ingredient = Ingredient(INGREDIENT_TYPE_FILLING, INGREDIENT_NAME, INGREDIENT_PRICE)
     return ingredient
 
 @pytest.fixture
