@@ -1,0 +1,4 @@
+BUN_NAME = "red bun"
+BUN_PRICE = 300.0
+INGREDIENT_NAME = "sausage"
+INGREDIENT_PRICE = 300
